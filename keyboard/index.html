@@ -1,1 +1,23 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keycode Keyboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Press Any Key</h1>
+        <div class="display">
+            <p>Key: <span id="key">-</span></p>
+            <p>Key Code: <span id="keyCode">-</span></p>
+            <p>Combination: <span id="combination">-</span></p>
+        </div>
+        <h2>Key History</h2>
+        <ul id="history"></ul>
+    </div>
+    <audio id="keypress-sound" src="keypress.mp3"></audio>
+    <script src="main.js"></script>
+</body>
+</html>
