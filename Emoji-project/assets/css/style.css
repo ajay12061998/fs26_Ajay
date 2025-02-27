@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary: #0074f12e;
+    --secondary: #3ccb002e;
+    --blend: transparent linear-gradient(105deg, #3ccb00 0%, #0074f1 100%) 0% 0% no-repeat padding-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    background: linear-gradient(105deg, var(--secondary) 0%, var(--primary) 100%) 0% 0% no-repeat padding-box;;
+    font-family: sans-serif;
+    /* color: #eee; */
+    font-size: 25px;
+}
+
+h1{
+    color: black;
+    /* background-image: linear-gradient(#f35c5c, #ffb341); */
+}
+.main{
+    height: 100vh;
+    overflow: hidden;
+}
+
+.navbar{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+}
+
+.navbar #filter-emogi button{
+    font-size: 15px;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 5px;
+    /* background-color: #ffa57b; */
+    background-color: #fdbb8f;
+    color: #000;
+    border: none;
+    cursor: pointer;
+}
+.navbar #filter-emogi button:hover{
+    background-color: #fca56b;
+}
+
+/* .search-bar{
+
+} */
+#search{
+    padding: 10px 10px 10px 32px;
+    background-image: url("./magnifying-glass.png");
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 10px;
+    border-radius: 20px;
+    outline: none;
+    font-size: 15px;
+    border: none;
+    
+}
+
+.navbar>img{
+    width: 20px;
+    height: 20px;
+}
+#random-emogi{
+    height: 20px;
+    width: 20px;
+}
+
+#display-emoji{
+    margin: 0px 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 20px;
+    height: 70vh;
+    overflow-y: auto;
+}
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--blend); 
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--blend); 
+}
+.emoji-size{
+    width: 50px;
+    font-size: 50px;
+}
+.emoji-item{
+    border: 2px solid #fff;
+    border-radius: 50px;
+    padding: 5px;
+    box-shadow: 0 0 10px #0000001c;
+    cursor: pointer;
+    background: transparent linear-gradient(105deg, var(--secondary) 0%, var(--primary) 100%) 0% 0% no-repeat padding-box;
+    transition: .3s ease;
+}
+.emoji-item:hover{
+    transform: scale(1.2);
+}
+
+@media only screen and (max-width: 600px) {
+    h1{
+        font-size: 30px;
+    }
+    .navbar{
+        flex-wrap: wrap;
+        padding: 0 20px;
+    }
+    #search{
+        width: 100%;
+    }
+    #filter-emogi{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    #display-emoji{
+        margin: 0 20px;
+        gap: 10px 10px;
+    }
+    .emoji-size{
+        font-size: 30px;
+    }
+  }
