@@ -1,1 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="wrapper">
+        <div class="container">
+            <h3 id="count"></h3>
+            <input type="text" placeholder="Search for a Pokemon" id="search" autocomplete="off" />
+            <select name="" id="">
+                <option value="" selected disabled>Select Type</option>
+                <option value="all">All Types</option>
+            </select>
+            <button id="loadMore">Load More</button>
+            <!-- <div id="pagination">
+                <button id="prevPage">Previous</button>
+                <span id="pageNumber">1</span>
+                <button id="nextPage">Next</button>
+            </div> -->
+        </div>
+    </div>
+    <div id="pokemons">
+      <div id="loading">LOADING...</div>
+    </div>
 
+    <script src="main.js"></script>
+    <!-- <script src="paination.js"></script> -->
+  </body>
+</html>
