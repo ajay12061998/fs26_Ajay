@@ -1,0 +1,64 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Order Button */
+#orderButton {
+    background-color: #ff5733;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+#orderButton:hover {
+    background-color: #c63d1e;
+}
+
+/* Food Items */
+#foodItems {
+    margin: 20px 0;
+}
+
+input[type="checkbox"] {
+    margin: 10px;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+/* Food Image */
+#foodImage {
+    display: block;
+    margin: 20px auto;
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Order ID */
+#orderId {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+}
+#foodImage {
+    width: 300px;
+    height: 300px;
+    margin-top: 50px;
+    display: none;
+  }
