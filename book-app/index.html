@@ -1,1 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CN Book App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/assets/styles.css">
+</head>
+
+<body class="text-gray-800 transition-all duration-300">
+    <header class="border border-1 border-gray-800 rounded-lg p-4 mx-10 flex justify-between items-center">
+        <h1 class="text-2xl flex gap-2 font-semibold">
+            <img class="w-[120px]" src="./assets/img/coding-nectar.png" alt="">
+        </h1>
+
+        <div class="flex gap-4">
+            <div class="toggle-container">
+                <input type="checkbox" id="toggle-switch" class="toggle-switch" aria-label="Toggle dark mode" />
+                <label for="toggle-switch" class="toggle-label">
+                    <span class="absolute top-1 left-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 24 24">
+                            <!-- Sun icon SVG content -->
+                        </svg>
+                    </span>
+                    <span class="absolute top-1 right-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 24 24">
+                            <!-- Moon icon SVG content -->
+                        </svg>
+                    </span>
+                    <span class="toggle-icon"></span>
+                </label>
+            </div>
+            <button id="auth-toggle"
+                class="bg-blue-600 hover:bg-yellow-500 hover:text-black text-sm text-white font-semibold space-x-8 px-3 py-1 rounded-full transition-all duration-300"
+                aria-label="Sign Up / Login">
+                <span>Sign Up / Sign In</span>
+                <span>-></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="p-10">
+        <div id="auth-modal"
+            class="fixed inset-0 bg-gray-900 bg-opacity-75 flex justify-center items-center z-50 hidden transform transition-transform modal-enter">
+            <div class="bg-white rounded-lg p-8 shadow-lg w-96">
+                <button id="close-modal"
+                    class="closeButton text-red-500 hover:text-red-700 font-bold text-xl ml-[98%] hover:shadow-lg border p-1 rounded">
+                    <a href="/index.html">X</a>
+                </button>
+                <h3 id="auth-title" class="text-2xl mb-4 text-blue-600 font-bold text-center">Sign Up</h3>
+                <form id="auth-form">
+                    <input type="text" id="username" placeholder="Username" class="w-full p-2 mb-4 border rounded"
+                        required aria-label="Username">
+                    <input type="email" id="email" placeholder="Email" class="w-full p-2 mb-4 border rounded" required
+                        aria-label="Email">
+                    <input type="password" id="password" placeholder="Password" class="w-full p-2 mb-4 border rounded"
+                        required aria-label="Password">
+                    <input type="password" id="confirm-password" placeholder="Confirm Password"
+                        class="w-full p-2 mb-4 border rounded" required aria-label="Confirm Password">
+                    <button type="submit"
+                        class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded transition-all duration-300">Submit</button>
+                </form>
+
+                <div class="mt-4 flex gap-2 justify-center">
+                    <p>Already have an account?</p>
+                    <button id="toggle-auth" class="text-md font-semibold mb-4 underline text-blue-600">Sign In</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex gap-6 relative">
+            <div class="w-[30vw] top-[80px] sticky category-list flex h-[80vh] flex-col gap-5 mb-5 overflow-y-auto" id="category-list">
+                <button
+                    class="filter-btn text-blue-600 transition-all text-start duration-300 hover:text-blue-800 font-semibold active-category"
+                    data-category="All">All Categories</button>
+                <!-- Categories will be dynamically inserted here -->
+            </div>
+            <div  class="w-[70vw]">
+                <h2 class="text-2xl leading-[2] text-[40px] font-bold text-gray-900 text-start">Best Sellers Books</h2>
+                <div id="book-list" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-0"></div>
+                <!-- Books will be dynamically inserted here -->
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-white text-center p-4">
+        <p>Coding Nectar &copy; 2025,  All rights reserved</p>
+    </footer>
+
+    <script src="/assets/script.js"></script>
+</body>
+
+</html>
