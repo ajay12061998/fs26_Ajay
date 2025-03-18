@@ -56,9 +56,9 @@
                 </button>
                 <h3 id="auth-title" class="text-2xl mb-4 text-blue-600 font-bold text-center">Sign In</h3>
                 <form id="auth-form-SignIn">
-                    <input type="text" id="username" placeholder="Username" class="w-full p-2 mb-4 border rounded"
+                    <input type="text" id="signin-username" placeholder="Username" class="w-full p-2 mb-4 border rounded"
                         required aria-label="Username">
-                    <input type="password" id="password" placeholder="Password" class="w-full p-2 mb-4 border rounded"
+                    <input type="password" id="signin-password" placeholder="Password" class="w-full p-2 mb-4 border rounded"
                         required aria-label="Password">
                     <button type="submit"
                         class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded transition-all duration-300">Submit</button>
@@ -71,15 +71,15 @@
                 <button id="close-modal" class="closeButton text-red-500 hover:text-red-700 font-bold text-xl ml-[98%] hover:shadow-lg border p-1 rounded">
                     X
                 </button>
-                <h3 id="auth-title" class="text-2xl mb-4 text-blue-600 font-bold text-center">Sign In</h3>
+                <h3 id="auth-title" class="text-2xl mb-4 text-blue-600 font-bold text-center">Sign Up</h3> <!-- Fixed title -->
                 <form id="auth-form-SignUp">
-                    <input type="text" id="username" placeholder="Username" class="w-full p-2 mb-4 border rounded"
+                    <input type="text" id="signup-username" placeholder="Username" class="w-full p-2 mb-4 border rounded"
                         required aria-label="Username">
-                    <input type="email" id="email" placeholder="Email" class="w-full p-2 mb-4 border rounded" required
+                    <input type="email" id="signup-email" placeholder="Email" class="w-full p-2 mb-4 border rounded" required
                         aria-label="Email">
-                    <input type="password" id="password" placeholder="Password" class="w-full p-2 mb-4 border rounded"
+                    <input type="password" id="signup-password" placeholder="Password" class="w-full p-2 mb-4 border rounded"
                         required aria-label="Password">
-                    <input type="password" id="confirm-password" placeholder="Confirm Password"
+                    <input type="password" id="signup-confirm-password" placeholder="Confirm Password"
                         class="w-full p-2 mb-4 border rounded" required aria-label="Confirm Password">
                     <button type="submit"
                         class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded transition-all duration-300">Submit</button>
@@ -99,7 +99,7 @@
                     data-category="All">All Categories</button>
                 <!-- Categories will be dynamically inserted here -->
             </div>
-            <div  class="w-[78vw]">
+            <div class="w-[78vw]">
                 <h2 class="text-2xl leading-[2] text-[40px] font-bold text-start">Best Sellers Books</h2>
                 <div id="book-list" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-0"></div>
                 <!-- Books will be dynamically inserted here -->
@@ -108,10 +108,9 @@
     </main>
 
     <footer class="bg-gray-900 text-white text-center p-4">
-        <p>CN Library &copy; 2025,  All rights reserved</p>
+        <p>CN Library © 2025, All rights reserved</p>
     </footer>
 
-    <!-- <script src="/assets/main.js"></script> -->
     <script src="/assets/custom.js"></script>
 </body>
 
