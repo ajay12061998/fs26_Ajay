@@ -6,14 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CN Book App</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="/assets/styles.css">
+    <link rel="stylesheet" href="/assets/style.css">
 </head>
 
 <body class="text-gray-800 transition-all duration-300">
     <header class="border border-1 border-gray-800 rounded-lg p-4 mx-10 flex justify-between items-center">
-        <h1 class="text-2xl flex gap-2 font-semibold">
-            <img class="w-[120px]" src="./assets/img/coding-nectar.png" alt="">
-        </h1>
+        <div class="flex items-center gap-6">
+            <a href="index.html">
+                <h1 class="text-2xl flex gap-2 font-semibold">
+                    <!-- <img class="w-[120px]" src="./assets/img/coding-nectar.png" alt=""> -->
+                    CN Book Library
+                </h1>
+            </a>
+            <a target="_blank" href="shoping-list.html" id="addToCart">Shoping List</a>
+        </div>
 
         <div class="flex gap-4">
             <div class="toggle-container">
@@ -44,13 +50,29 @@
     <main class="p-10">
         <div id="auth-modal"
             class="fixed inset-0 bg-gray-900 bg-opacity-75 flex justify-center items-center z-50 hidden transform transition-transform modal-enter">
-            <div class="bg-white rounded-lg p-8 shadow-lg w-96">
-                <button id="close-modal"
-                    class="closeButton text-red-500 hover:text-red-700 font-bold text-xl ml-[98%] hover:shadow-lg border p-1 rounded">
-                    <a href="/index.html">X</a>
+            <div class="bg-white rounded-lg p-8 shadow-lg w-96" id="signInForm">
+                <button id="close-modal" class="closeButton text-red-500 hover:text-red-700 font-bold text-xl ml-[98%] hover:shadow-lg border p-1 rounded">
+                    X
                 </button>
-                <h3 id="auth-title" class="text-2xl mb-4 text-blue-600 font-bold text-center">Sign Up</h3>
-                <form id="auth-form">
+                <h3 id="auth-title" class="text-2xl mb-4 text-blue-600 font-bold text-center">Sign In</h3>
+                <form id="auth-form-SignIn">
+                    <input type="text" id="username" placeholder="Username" class="w-full p-2 mb-4 border rounded"
+                        required aria-label="Username">
+                    <input type="password" id="password" placeholder="Password" class="w-full p-2 mb-4 border rounded"
+                        required aria-label="Password">
+                    <button type="submit"
+                        class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded transition-all duration-300">Submit</button>
+                </form>
+                <div class="mt-4 flex gap-2 justify-center">
+                    <button id="toggle-auth" class="text-md font-semibold mb-4 underline text-blue-600">Sign Up</button>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg p-8 shadow-lg w-96 hidden" id="signUpForm">
+                <button id="close-modal" class="closeButton text-red-500 hover:text-red-700 font-bold text-xl ml-[98%] hover:shadow-lg border p-1 rounded">
+                    X
+                </button>
+                <h3 id="auth-title" class="text-2xl mb-4 text-blue-600 font-bold text-center">Sign In</h3>
+                <form id="auth-form-SignUp">
                     <input type="text" id="username" placeholder="Username" class="w-full p-2 mb-4 border rounded"
                         required aria-label="Username">
                     <input type="email" id="email" placeholder="Email" class="w-full p-2 mb-4 border rounded" required
@@ -70,26 +92,27 @@
             </div>
         </div>
 
-        <div class="flex gap-6 relative">
-            <div class="w-[30vw] top-[80px] sticky category-list flex h-[80vh] flex-col gap-5 mb-5 overflow-y-auto" id="category-list">
+        <div class="flex gap-6 relative top-[60px]">
+            <div class="w-[21vw] top-[80px] sticky category-list flex h-[80vh] flex-col gap-5 mb-5 overflow-y-auto" id="category-list">
                 <button
                     class="filter-btn text-blue-600 transition-all text-start duration-300 hover:text-blue-800 font-semibold active-category"
                     data-category="All">All Categories</button>
                 <!-- Categories will be dynamically inserted here -->
             </div>
-            <div  class="w-[70vw]">
-                <h2 class="text-2xl leading-[2] text-[40px] font-bold text-gray-900 text-start">Best Sellers Books</h2>
-                <div id="book-list" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-0"></div>
+            <div  class="w-[78vw]">
+                <h2 class="text-2xl leading-[2] text-[40px] font-bold text-start">Best Sellers Books</h2>
+                <div id="book-list" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-0"></div>
                 <!-- Books will be dynamically inserted here -->
             </div>
         </div>
     </main>
 
     <footer class="bg-gray-900 text-white text-center p-4">
-        <p>Coding Nectar &copy; 2025,  All rights reserved</p>
+        <p>CN Library &copy; 2025,  All rights reserved</p>
     </footer>
 
-    <script src="/assets/script.js"></script>
+    <!-- <script src="/assets/main.js"></script> -->
+    <script src="/assets/custom.js"></script>
 </body>
 
 </html>
