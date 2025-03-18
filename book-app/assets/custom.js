@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
             authToggle.querySelector("span:last-child").style.display = "inline";
             logoutButton.remove();
             alert("Logged out successfully!");
-            window.location.href = "/index.html";
+            window.location.href = "index.html";
         });
     }
 
