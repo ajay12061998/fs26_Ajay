@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
             authToggle.classList.add("space-x-8");
             authToggle.querySelector("span:last-child").style.display = "inline";
             logoutButton.remove();
-            // alert("Logged out successfully!");
+            alert("Logged out successfully!");
             window.location.href = "/index.html";
         });
     }
@@ -106,8 +106,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Handle Sign In form submission
     document.getElementById("auth-form-SignIn").addEventListener("submit", (e) => {
         e.preventDefault();
-        const username = signInForm.querySelector("#username").value;
-        const password = signInForm.querySelector("#password").value;
+        const username = signInForm.querySelector("#signin-username").value;
+        const password = signInForm.querySelector("#signin-password").value;
 
         const storedUser = JSON.parse(localStorage.getItem(username));
         if (!storedUser) {
@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
         addToCartButton.style.display = "block";
         updateAuthToggleText(username);
         createLogoutButton();
-        alert("Signed in successfully!");
+        // alert("Signed in successfully!");
 
         hideModal();
         document.getElementById("auth-form-SignIn").reset();
@@ -133,10 +133,10 @@ document.addEventListener("DOMContentLoaded", function () {
     // Handle Sign Up form submission
     document.getElementById("auth-form-SignUp").addEventListener("submit", (e) => {
         e.preventDefault();
-        const username = signUpForm.querySelector("#username").value;
-        const email = signUpForm.querySelector("#email").value;
-        const password = signUpForm.querySelector("#password").value;
-        const confirmPassword = signUpForm.querySelector("#confirm-password").value;
+        const username = signUpForm.querySelector("#signup-username").value;
+        const email = signUpForm.querySelector("#signup-email").value;
+        const password = signUpForm.querySelector("#signup-password").value;
+        const confirmPassword = signUpForm.querySelector("#signup-confirm-password").value;
 
         if (password !== confirmPassword) {
             alert("Passwords don't match!");
@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         const user = { username, email, password };
         localStorage.setItem(username, JSON.stringify(user));
-        alert("User registered successfully! Please sign in.");
+        // alert("User registered successfully! Please sign in.");
 
         toggleAuthMode();
         document.getElementById("auth-form-SignUp").reset();
@@ -346,15 +346,11 @@ document.addEventListener("DOMContentLoaded", function () {
     fetchBooksByCategory("All");
     document.querySelector('[data-category="All"]').classList.add("active-category");
 
-    // Link "Add to Cart" button to cart page
-    // addToCartButton.addEventListener("click", () => {
-    //     window.location.href = "/cart.html";
-    // });
+    // Link "Add to Cart" button to cart page (already handled by <a> tag)
 });
 
 
-
-// add to card code
+// Add To Cart
 
 document.addEventListener("DOMContentLoaded", function () {
     const shoppingListDiv = document.getElementById("shopping-list");
